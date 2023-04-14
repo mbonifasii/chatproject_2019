@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CHAT</title>
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container display-flex">
+            <div class="header-icon">
+                <a href="">
+                    <img id="larefa-icon" src="../images/laRefa.png" alt="Icono Chat">
+                </a>
+            </div>
+
+            <div class="stick ">
+                <nav>
+                    <img id="mobile-menu" class="mobile-menu" src="../images/barra.png" alt="Icono Menu">
+                    <ul class="jc-end">
+                        <li>
+                            <a target="_blank" href="http://larefa.com.gt/">Menus
+                                            </a>
+                        </li>
+                        <li>
+                            <a onclick="getOut()">Finalizar Chat</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="global-container">
+        <div class="display-flex-cglobal paddingLeft-4rem">
+
+            <div class="container-main-chat width-70p">
+                <div class="container-chat">
+                    <div class="chat-header">
+                        <p id="conversation-name">LaRefa Chat</p>
+                    </div>
+                    <div id="chat-box" class="chat-box">
+
+                    </div>
+                    <div class="container-writeMessage display-flex">
+                        <div class="display-flex" style="width: 100%;">
+                            <form id="message-input" style="width: inherit;" action="">
+                                <div class="display-flex container-input-button">
+                                    <input autocomplete="off" id="input-chat" class="input-chat display-flex" type="text" placeholder="Pide tu Orden" required>
+                                    <button id="send-message" type="submit">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container-user-status">
+                <div class="status-container">
+                    <div class="container-list">
+                        <div id="c-naranjaRojo" class="status-user c-naranjaRojo">
+
+                            <img class="firstStatus " src="../images/finalizado.png " alt="Logo Chat Finalizado ">
+
+                        </div>
+                        <div id="c-morado" class=" status-user  c-morado">
+                            <img class="secondtStatus " src="../images/ordenLista.png " alt="Logo Orden Lista! ">
+
+                        </div>
+                        <div id="c-celeste" class=" status-user c-celeste">
+                            <img class="thirdStatus " src="../images/cocinando.png " alt="Logo Cocinando ">
+
+                        </div>
+                        <div id="c-verde" class=" status-user c-verde">
+                            <img class="fourthStatus " src="../images/chatI.png " alt="Logo Chat Iniciado ">
+
+                        </div>
+
+                    </div>
+                    <div class="container-text-status">
+
+                        <p id="text-status" class="text-status name-status ">Estado de la Orden</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="../scripts/user.js"></script>
+</body>
+
+</html>
